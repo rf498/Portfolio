@@ -334,6 +334,16 @@ template {
 /* =============
     Typography
 ============= */
+header {
+  font-family: "Radio Canada Big", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
 /* =============
     Buttons
 ============= */

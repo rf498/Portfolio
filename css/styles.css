@@ -373,6 +373,42 @@ textarea {
 /* =============
     Header
 ============= */
+#header-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+  grid-template-columns: repeat(5, 1fr);
+      grid-template-areas: "g2 g3 g4 g5 g6";
+}
+#header-nav #g1 {
+  grid-area: g1;
+}
+#header-nav #g2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: g2;
+}
+#header-nav #g3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: g3;
+}
+#header-nav #g4 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: g4;
+}
+#header-nav #g5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: g5;
+}
+#header-nav #g6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: g6;
+}
+
 /* =============
     Footer
 ============= */

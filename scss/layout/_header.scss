@@ -2,35 +2,95 @@
     Header
 ============= */
 
-
-#header-nav{
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-
-grid-template-areas:
-"g2 g3 g4 g5 g6";
-#g1{
-    grid-area: g1;
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+    color: var(--black)
 }
 
-#g2{
-    grid-area: g2;
+header{
+    background-color: var(--gray);
+
+    display: grid;
+    grid-template-columns: 20% auto;
+    grid-template-areas: 
+    "burger-container contact-container"
+    "main-menu main-menu";
+
+    padding: 24px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    @include md{
+        grid-template-columns: auto 40% auto;
+        gap: auto;
+        grid-template-areas: 
+        "name-container main-menu contact-container";
+
+        padding: 12px;
+    }
+
+    @include lg{
+        grid-template-columns: auto 60% auto;
+        grid-template-areas: 
+        "name-container main-menu contact-container"; 
+    }
+
+    #burger-container{
+        grid-area: burger-container;
+        padding-left: 16px;
+        display: flex;
+        align-items: center;
+
+        @include md{
+            display: none;
+        }
+    }
+
+    #contact-container{
+        grid-area: contact-container;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 16px;
+
+        @include lg{
+            padding-right: 20px;
+            align-items: center;
+        }
+
+    }
+
+    #main-menu{
+        grid-area: main-menu;
+        @include md{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+
+    #name-container{
+        display: none;
+
+        @include md{
+            display: flex;
+            justify-content: flex-start;
+            grid-area: name-container;
+            padding: 24px;
+            font-family: "Radio Canada Big", sans-serif;
+            font-size: rem-calc(30);
+            align-items: center;
+        }
+    }
+
 }
 
-#g3{
-    grid-area: g3;
+.hideMainNav{
+    display: none;
+    
 }
-
-#g4{
-    grid-area: g4;
-}
-
-#g5{
-    grid-area: g5;
-}
-
-#g6{
-    grid-area: g6;
-}
-}
-

@@ -1,3 +1,51 @@
 /* =============
     Navigation
 ============= */
+
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+}
+
+#main-menu{
+    background-color: var(--white);
+    padding: 24px 16px;
+    margin-top: 16px;
+
+    @include md{
+        background-color: var(--gray);
+        margin-top: 0px;
+    }
+
+    ul{
+        @include md{
+            display: flex;
+            align-items: center;
+            border-left: 3px dotted var(--black);
+        }
+        li{
+            @include md{
+                border-right: 3px dotted var(--black);
+            }
+                a:link, a:visited{
+                    font-size: rem-calc(24);
+                    padding: 8px 0;
+                    display: inline-block;
+                    color: var(--black);
+
+                    @include md{
+                        font-size: rem-calc(18);
+                        padding: 8px 24px;
+                    }
+
+                    @include lg{
+                        font-size: rem-calc(30);
+                    }
+
+                    &:hover, &:active{
+                        color: var(--red);
+                    }
+                }
+            }
+        }
+    }

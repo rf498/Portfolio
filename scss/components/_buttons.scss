@@ -1,3 +1,20 @@
 /* =============
     Buttons
 ============= */
+
+
+button{
+    border: none;
+    background-color: var(--red);
+    font-size: rem-calc(18);
+    color: var(--white);
+    padding: 8px 16px;
+    transition: 0.25s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: var(--white);
+        color: var(--red);
+    }
+
+}

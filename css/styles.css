@@ -604,6 +604,12 @@ header #name-container {
 /* =============
     Footer
 ============= */
+footer {
+  background-color: var(--gray);
+  color: var(--black);
+  height: 10vh;
+}
+
 #index-grid {
   display: -ms-grid;
   display: grid;

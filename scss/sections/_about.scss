@@ -1,0 +1,58 @@
+
+#index-grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "index-hero"
+    "statement"
+    "about";
+
+    
+
+    @include md{
+        grid-template-columns: 60% auto;
+        grid-template-areas: "statement index-hero"
+        "about index-hero"
+        "about index-hero";
+    }
+
+#index-hero{
+    grid-area: index-hero;
+    background-image: url(../images/illustration.jpg);
+    height: 75vh;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+   @include lg{
+    height: 50vh;
+    background-position: top right;
+    padding-top: 150px;
+
+   }
+}
+#statement{
+    grid-area: statement;
+    text-align: center;
+    color: var(--red);
+    font-family: "Radio Canada Big", sans-serif;
+    font-weight: 200;
+
+    @include lg{
+        font-size: rem-calc(30);
+    }
+
+}
+
+#about{
+    grid-area: about;
+    text-align: center;
+
+    p{
+        @include lg{
+            font-size: rem-calc(25);
+        }
+
+    }
+
+}
+}

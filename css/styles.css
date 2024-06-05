@@ -757,6 +757,7 @@ h1 {
 #project-grid {
   display: -ms-grid;
   display: grid;
+  padding-bottom: 20px;
 }
 #project-grid h2 {
   padding-top: 0;

@@ -1,0 +1,47 @@
+
+h1{
+    padding-top: 0;
+    margin-top: 0;
+    border-bottom: 6px solid var(--red);
+
+    @include md{
+        padding-top: 40px;
+    }
+}
+
+#project-grid{
+    display: grid;
+
+    h2{
+        padding-top: 0;
+        margin-top: 0;
+    }
+
+    p{
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+
+    #project1{
+    background-image: url(../images/libguide.jpg);
+    height: 40vh;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    }
+
+    #link2{
+        padding-top: 10px;
+    }
+
+    #project2{
+        height: 300px;
+        width: 450px;
+
+        @include md{
+            width: 960px;
+            height: 569px;
+        }
+    }
+}

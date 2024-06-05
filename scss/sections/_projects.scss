@@ -29,6 +29,10 @@ h1{
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: top left;
+
+    @include md{
+        height: 60vh;
+    }
     }
 
     #link2{

@@ -773,6 +773,11 @@ h1 {
   background-repeat: no-repeat;
   background-position: top left;
 }
+@media (min-width: 768px) {
+  #project-grid #project1 {
+    height: 60vh;
+  }
+}
 #project-grid #link2 {
   padding-top: 10px;
 }

@@ -41,5 +41,15 @@
     h3{
         border-top: 6px solid var(--red);
         margin-top: 6px;
+        a:link, a:visited{
+            text-decoration: none;
+            transition: 0.25s;
+            color: var(--black)
+        }
+        
+            &:hover, &:active{
+                color: var(--red);
+        
+    }
     }
 }

@@ -519,9 +519,23 @@ header #contact-container {
           align-items: center;
   padding-right: 16px;
 }
+header #contact-container a {
+  border: none;
+  background-color: var(--red);
+  font-size: 1.125rem;
+  color: var(--white);
+  padding: 8px 16px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  cursor: pointer;
+}
+header #contact-container a:hover {
+  background-color: var(--white);
+  color: var(--red);
+}
 @media (min-width: 1024px) {
   header #contact-container {
-    padding-right: 20px;
+    padding-right: 100px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -558,7 +572,7 @@ header #name-container {
         -ms-flex-pack: start;
             justify-content: flex-start;
     grid-area: name-container;
-    padding: 24px;
+    padding-left: 100px;
     font-family: "Radio Canada Big", sans-serif;
     font-size: 1.875rem;
     -webkit-box-align: center;
@@ -604,10 +618,68 @@ header #name-container {
 /* =============
     Footer
 ============= */
-footer {
+a:link, a:visited {
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--black);
+}
+
+#footer-grid {
   background-color: var(--gray);
   color: var(--black);
-  height: 10vh;
+  height: 16vh;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+      grid-template-areas: "f1" "f2";
+}
+@media (min-width: 768px) {
+  #footer-grid {
+    height: 10vh;
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+        grid-template-areas: "f2 f1";
+  }
+}
+#footer-grid #f1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: f1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 768px) {
+  #footer-grid #f1 {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+#footer-grid #f2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media (min-width: 768px) {
+  #footer-grid #f1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  #footer-grid #f2 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+}
+#footer-grid a:hover, #footer-grid a:active {
+  color: var(--red);
 }
 
 #index-grid {
@@ -742,6 +814,15 @@ footer {
   border-top: 6px solid var(--red);
   margin-top: 6px;
 }
+#resume-grid h3 a:link, #resume-grid h3 a:visited {
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--black);
+}
+#resume-grid h3:hover, #resume-grid h3:active {
+  color: var(--red);
+}
 
 h1 {
   padding-top: 0;
@@ -790,5 +871,83 @@ h1 {
   #project-grid #project2 {
     width: 960px;
     height: 569px;
+  }
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  color: var(--black);
+}
+
+a:hover, a:active {
+  color: var(--red);
+}
+
+#assoc-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+  grid-template-columns: auto;
+      grid-template-areas: "assoc-title" "a1" "a2" "a3" "a4";
+}
+@media (min-width: 768px) {
+  #assoc-grid {
+    -ms-grid-columns: 50% auto;
+    grid-template-columns: 50% auto;
+        grid-template-areas: "assoc-title assoc-title" "a1 a2" "a3 a4";
+  }
+}
+#assoc-grid #assoc-title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: assoc-title;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+#assoc-grid #a1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: a1;
+  padding-top: 0;
+  margin-top: 0;
+}
+#assoc-grid #a2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: a2;
+}
+#assoc-grid #a3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: a3;
+}
+#assoc-grid #a4 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: a4;
+}
+@media (min-width: 768px) {
+  #assoc-grid #assoc-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  #assoc-grid #a1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  #assoc-grid #a2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  #assoc-grid #a3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  #assoc-grid #a4 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
   }
 }

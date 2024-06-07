@@ -2,9 +2,49 @@
     Footer
 ============= */
 
+a:link, a:visited{
+    text-decoration: none;
+    transition: 0.25s;
+    color: var(--black)
+}
 
-footer{
+
+#footer-grid{
     background-color: var(--gray);
     color: var(--black);
-    height: 10vh;
+    height: 16vh;
+    padding-left: 6px;
+    padding-right: 6px;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "f1"
+    "f2";
+
+    @include md{
+        height: 10vh;
+        grid-template-columns: 50% auto;
+        grid-template-areas: "f2 f1";
+    }
+
+
+    #f1{
+        grid-area: f1;
+        display: flex;
+
+        @include md{
+            justify-content: flex-end;
+        }
+    }
+
+    #f2{
+        grid-area: f2;
+        display: flex;
+    }
+
+    a{
+        &:hover, &:active{
+            color: var(--red);
+    }
+}
 }
